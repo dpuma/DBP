@@ -1,6 +1,9 @@
 package com.ecodeup.com;
 
 import java.io.IOException;
+import java.util.Date;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,7 +31,15 @@ public class Servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		getServletContext().getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+		Bean bean = new Bean();
+		bean.setDate(new Date());
+		bean.setId(111); 
+		request.setAttribute("bean", bean);
+		request.setAttribute("name", "Juan");
+		
+		//getServletContext().getRequestDispatcher("/jsp/index.jsp").forward(request, response);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/index.jsp");
+    	dispatcher.forward(request, response);
 	}
 
 	/**
