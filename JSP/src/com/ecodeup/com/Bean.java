@@ -5,7 +5,6 @@ import java.util.Date;
 public class Bean {
 
 	public Bean() {
-
 	}
 	private Date date;
 	private int id;
@@ -21,5 +20,4 @@ public class Bean {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
 }
