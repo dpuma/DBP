@@ -15,7 +15,7 @@ public class Conexion {
 		this.jdbcUsername = jdbcUsername;
 		this.jdbcPassword = jdbcPassword;
 	}
- 
+    
 	public void conectar() throws SQLException {
         if (jdbcConnection == null || jdbcConnection.isClosed()) {
             try {

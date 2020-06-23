@@ -10,12 +10,7 @@ import java.util.List;
  
 import com.ecodeup.articulos.model.Articulo;
 import com.ecodeup.articulos.model.Conexion;
- 
-/*
- * @autor: Elivar Largo
- * @web: www.ecodeup.com
- */
- 
+
 public class ArticuloDAO {
 	private Conexion con;
 	private Connection connection;
